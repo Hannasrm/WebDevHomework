@@ -1,0 +1,101 @@
+/*import=insert other stylesheet here, always iimport on the top line(s) of your file*/
+@import 'HW3main.css';
+
+
+/* layout 1 specific styles */
+
+main{
+	width:900px;
+	margin: 0 auto;
+	background-color:#B0C4DE;
+	
+
+}
+body{
+	background-color:#A9A9A9;
+}
+header{
+	padding-left:5px;
+	width:900px;
+	margin:0 auto;
+	background-color:#B0C4DE;
+	border-top:10px solid rgb(152,152,152) ;
+	border-right:10px solid rgb(152,152,152) ;
+	border-left:10px solid rgb(152,152,152) ;
+	border-bottom:5px solid rgb(152,152,152) ;
+}
+
+footer{
+	width:900px;
+	margin:0 auto;
+	background-color:#B0C4DE;
+	border-top:5px solid rgb(152,152,152) ;
+	border-right:10px solid rgb(152,152,152) ;
+	border-left:10px solid rgb(152,152,152) ;
+	border-bottom:10px solid rgb(152,152,152) ;
+}
+
+article{
+	width:600px;
+	float:left;
+	padding: 10px;
+	background-color:rgb(152,152,152);
+}
+
+aside{
+	display:block; 
+	float:left;
+	width:300px;
+	height:782.63px;
+	border-top:10px solid rgb(152,152,152);
+	border-right:10px solid rgb(152,152,152);
+	border-left:10px solid rgb(152,152,152);
+	border-bottom :10px solid rgb(152,152,152);
+	background-color: #B0C4DE;
+}
+
+
+
+
+section {
+	padding:10px;
+	background-color: #B0C4DE;
+
+
+}
+
+ul.vertical-nav{
+	list-style-type:none; 
+	padding-left:0;	
+}
+
+h2{
+	padding-left:5px;
+}
+
+
+
+.vertical-nav li a{
+	color:#111;
+	text-decoration: none;
+	display: block;
+	padding: 20px;
+	border-top: 5px solid rgb(152,152,152);
+	border-bottom: 5px solid rgb(152,152,152);
+	background-color: #B0C4DE;
+	text-align: center; 
+	margin: none;
+
+
+}
+
+.vertical-nav li a:hover{
+	color:#ccc;
+	background-color:#222;
+
+}
+
+/*aside nav ul {
+}*/
+
+
