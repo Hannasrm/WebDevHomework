@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Birthday Countdown</title>
+    <meta name="author" content="Hanna Rinderknecht-Mahaffy">
+    <meta name="description" content="Countdown to my Birthday">
+    <meta name="keywords" content="Timer, bday countdown">
+<style>
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  position: relative;
+  padding-right:0;
+
+}
+
+body::after {
+  content: "";
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHU81BI7WL46uz4OGWt4RoNZRlETZqn3tChZVuGUryZhcYVco1);
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  min-height:100%;
+  min-width:100%;
+}
+
+
+
+h3{ text-align: center;
+  font-size: 50px;
+  margin-top:0px;
+  border-style:solid;
+  border-width:5px;
+  font-weight:200;
+
+}
+h1{
+ 
+    margin-right:0;
+    text-align:center;
+    object-position: top;
+    margin:0;
+    border-bottom-style:solid;
+    border-width:5px;
+
+
+
+
+}
+</style>
+</head>
+<body>
+
+<h1 id="header1"> Birthday Countdown </h1>
+
+<h3 id="timer"></h3>
+
+
+
+<script>
+
+document.getElementById("header1").style.color="purple"; 
+document.getElementById("timer").style.color="Purple";    
+
+var BDayTime = new Date("May 18, 2018 22:37:00").getTime();
+
+
+
+
+var BDay = setInterval(function() {
+
+
+    var currentTime = new Date().getTime();
+    var remainingTime = BDayTime - currentTime;
+    
+
+    var seconds=Math.floor((remainingTime/1000)%60);        //time/1000 coverts milliseconds to seconds, dividing total seconds by 60 and taking remainder (%60) gives you remainder of seconds after minutes have been counted. 
+    var minutes=Math.floor((remainingTime/1000/60)%60);
+    var hours = Math.floor((remainingTime/(1000*60*60))%24);
+    var days=Math.floor(remainingTime/(1000*60*60*24)); 
+    
+
+    document.getElementById("timer").innerHTML = days + "ds  " + hours + "hrs  "
+    + minutes + "min  " + seconds + "sec";
+    
+ 
+    
+
+    
+}, 1000); //function updates every second/1000ms.
+</script>
+
+
+</body>
+</html>
